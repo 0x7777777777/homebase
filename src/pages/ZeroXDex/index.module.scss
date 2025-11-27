@@ -1,0 +1,245 @@
+@import '../../styles/themes';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 12px;
+}
+
+.intro {
+  background: linear-gradient(135deg, #0f172a, #1d2a44);
+  color: #fff;
+  padding: 20px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.overline {
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin: 0 0 4px;
+}
+
+.muted {
+  color: #94a3b8;
+  margin: 4px 0 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #0b1020;
+  color: #e2e8f0;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  input,
+  select {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 10px 12px;
+    color: #e2e8f0;
+  }
+}
+
+.quote {
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  min-height: 80px;
+}
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.error {
+  color: #f87171;
+}
+
+.hint {
+  margin-top: 10px;
+  color: #94a3b8;
+
+  a {
+    color: #7dd3fc;
+  }
+}
+
+.table {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-head,
+.table-row {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(4, 1fr) 100px;
+  padding: 10px 12px;
+  align-items: center;
+}
+
+.table-head {
+  background: rgba(255, 255, 255, 0.04);
+  font-weight: 600;
+}
+
+.table-row:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.add-row {
+  margin-top: 14px;
+  align-items: end;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.primary-btn,
+.ghost-btn {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  color: #e2e8f0;
+  background: transparent;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #22d3ee, #6366f1);
+  border: none;
+}
+
+.pill {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.pill.success {
+  background: rgba(52, 211, 153, 0.18);
+  color: #34d399;
+}
+
+.pill.danger {
+  background: rgba(248, 113, 113, 0.18);
+  color: #f87171;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.status {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.progress {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(135deg, #22d3ee, #6366f1);
+  transition: width 0.3s ease;
+}
+
+.result {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.result.win {
+  background: rgba(52, 211, 153, 0.18);
+  color: #34d399;
+}
+
+.result.lose {
+  background: rgba(248, 113, 113, 0.18);
+  color: #f87171;
+}
+
+.result.draw {
+  background: rgba(250, 204, 21, 0.12);
+  color: #facc15;
+}
+
+.history {
+  margin-top: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.history .table-head,
+.history .table-row {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .table-head,
+  .table-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .table-head span:nth-child(n + 3),
+  .table-row span:nth-child(n + 3) {
+    display: none;
+  }
+}
