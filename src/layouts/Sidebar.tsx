@@ -16,13 +16,13 @@ import { ReactComponent as LLMLayerIcon } from 'assets/icons/logo_llm_layer.svg'
 import { ReactComponent as ThesisIcon } from 'assets/icons/logo_thesis.svg';
 import { ReactComponent as LfgIcon } from 'assets/icons/logo_lfg.svg';
 import { ReactComponent as OraidexIcon } from 'assets/icons/logo_oraidex.svg';
-import { ReactComponent as OrderbookIcon } from 'assets/icons/orderbook_ic.svg';
 import { ReactComponent as OFutureIcon } from 'assets/icons/future_ic.svg';
 import { ReactComponent as OrchaiIcon } from 'assets/icons/logo_orchai.svg';
 import { ReactComponent as OraiStakingIcon } from 'assets/icons/orai_staking.svg';
 import { ReactComponent as OwalletIcon } from 'assets/icons/logo_owallet.svg';
 import { ReactComponent as TimeIcon } from 'assets/icons/time.svg';
 import { ReactComponent as ControlCenterIcon } from 'assets/icons/control-center.svg';
+import { ReactComponent as OrderbookIcon } from 'assets/icons/orderbook_ic.svg';
 import classNames from 'classnames';
 import ModalDownloadOwallet from 'components/Modals/ModalDownloadOwallet/ModalDownloadOwallet';
 import useTheme from 'hooks/useTheme';
@@ -108,6 +108,7 @@ const Sidebar: React.FC<{}> = React.memo((props) => {
             {renderLink('/homebase', 'Homebase', setLink, <HomeBaseIcon />)}
             {renderLink('/gpu-staking', 'GPU Staking', setLink, <GpuStakingIcon />)}
             {renderLink('/gpu-credit', 'GPU Credit', setLink, <GpuCreditIcon />)}
+            {renderLink('/dex', '0x DEX & Game', setLink, <OrderbookIcon className={styles.customIcon} />)}
             {renderLink(
               'https://scan.orai.io/validators',
               'ORAI Staking',
